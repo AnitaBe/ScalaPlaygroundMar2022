@@ -11,7 +11,7 @@ object Day4ExerciseBonus extends App {
   val myWage = readLine("What is your salary?" ).toInt
   //Calculate Xmas bonus if they have worked at least 2  years otherwise print sorry no bonus
   println("Do you qualify for Christmas bonus?")
-  if (myExperience<2) {
+  if (myExperience<=2) {
     println(s"Sorry, no bonus this year, $myName")
   }
   else {
