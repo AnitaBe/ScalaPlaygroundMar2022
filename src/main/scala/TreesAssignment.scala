@@ -6,13 +6,23 @@ object TreesAssignment extends App {
   val humanName=readLine("What is your name? ")
 
   //TODO ask for tree height
-  val treeHeight = readLine("What is height of your tree? ")
-val emtySpace = humanName.length
-  println(emtySpace)
+  val maxHeight = 40
+  val minHeight = 3
+  val treeHeight = readLine("What is height of your tree? ").toInt
+  for ((c, i)<- humanName.zipWithIndex) {
+    if (treeHeight < minHeight) {
+      println(s"Minimum height should be more than $minHeight")
+    }
+    else {
+      println(" " * (humanName.length - i) + s"${c}" * (i + 2))
+    }
+  }
+
+
+
+
+
   //TODO print a xmas tree (or another tree) by calling printTree function with the correct parameters
-for ((c, i)<- humanName.zipWithIndex){
-  println(" "*(10-i)+"*"+s"${c}"*(i+1))
-}
 
 
   //tree height should be the one assigned
