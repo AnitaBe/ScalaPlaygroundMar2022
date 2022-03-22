@@ -7,27 +7,25 @@ object Day7StringExercise extends App {
     //you will probably want to use var to store a temporary string that you keep reweriting
     //return newly created string
     "FIXME" //FIXME
+    val trimmedString = if (needsTrim) text.trim else text
 
-    var trimmedString = ""
-    if (needsTrim) {
-    trimmedString= text.trim
-    } else {
-      trimmedString = text
-    }
-
-  var newString = ""
-    for (c<- trimmedString) {
+    var newString = "" //so I start with an empty string and build it up
+    //this approach with an empty string is completely fine on smaller strings say a few hundred characters long
+    //it will get slow to add a new character to the end of a large string
+    //for that we need to use a StringBuilder which is optimized for concatenation operations
+    //https://www.baeldung.com/scala/stringbuilder //TODO check it out
+    for (c <- trimmedString){
       if (uppercaseChars.contains(c)) {
-        newString += c.toUpper
+        newString += c.toUpper //we are building up a new string one character at a time
       } else {
         newString += c
       }
     }
     newString
   }
-
   println(processString("abracadabra", "cr")) //should print abRaCadabRa
   println(processString("   abracadabra  ", "cr", needsTrim = true)) //should print abRaCadabRa
-
+  println(processString("   Riga is a nice city isn't it?  ", "ci", needsTrim = true)) //should print abRaCadabRa
+  println(" "*10+"*"*5) //this can save a lot of looping time for certain tasks
 
 }
