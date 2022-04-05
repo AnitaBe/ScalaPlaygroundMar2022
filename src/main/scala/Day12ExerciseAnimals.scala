@@ -32,7 +32,6 @@ import scala.collection.mutable
       animalLikes
     }
   }
-  }
   //
   //
   //
