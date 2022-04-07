@@ -26,11 +26,13 @@ def getDayType (day: String): String = day.capitalize match{
     case "Saturday" | "Sunday" => "weekend"
     case _ => "There is no such a day"
   }
-  //TODO test the functions with some data!
+  //test the functions with some data!
 val dayNum = readLine("Insert number of weekday:" ).toInt
   println(getDay(dayNum))
 
   val dayType = readLine("What day is today?" )
   println(s"It is ${getDayType(dayType)}")
 
+  println(getDay(3))
+  println(getDay(8))
 }
