@@ -1,5 +1,7 @@
 package com.github.AnitaBe
 
+import scala.io.StdIn.readLine
+
 object Day9WordLengthExercise extends App {
   //TODO ask user to enter a sentence
   //Split sentence into words using split , you will will have a sequence of words, we did this on Day 8

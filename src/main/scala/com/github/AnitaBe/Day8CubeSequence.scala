@@ -1,8 +1,10 @@
 package com.github.AnitaBe
 
+import scala.io.StdIn.readLine
+
 object Day8CubeSequence extends App {
-  //TODO ask user for starting number
-  //TODO ask user for ending numbers
+  // ask user for starting number
+  // ask user for ending numbers
   //Calculate cubes of these integers including start and end AND store results in a sequence
   //Print the saved sequence on screen
   val startNum = readLine("What is your starting number? ").toInt

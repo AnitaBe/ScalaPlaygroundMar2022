@@ -1,5 +1,7 @@
 package com.github.AnitaBe
 
+import com.github.AnitaBe.MyUtil.myRound
+
 object Day6Functions extends App {
   println("Let's go eat something!")
 
@@ -70,7 +72,7 @@ object Day6Functions extends App {
   }
 
   greetWaiter()
-  greetWaiter(("Bob"))
+  greetWaiter("Bob")
   greetWaiter("Carol")
   greetWaiter("Dave", isYelling = true)
 

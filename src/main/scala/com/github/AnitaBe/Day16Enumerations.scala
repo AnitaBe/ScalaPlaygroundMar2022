@@ -2,6 +2,7 @@ package com.github.AnitaBe
 
 
 
+import com.github.AnitaBe.Days.Days
 import com.github.AnitaBe.Fingers.Finger
 //more examples here
 //https://www.baeldung.com/scala/enumerations
@@ -57,6 +58,11 @@ object Day16Enumerations extends App {
   //TODO Your Task is to create an enumeration of days of the week
   //create an method (outside com.github.AnitaBe.Days enumeration)to check if it is weekend - so similar logic to what we did in the last lecture pattern matching
   //here the difference that we are using specific enums
+def isWeekend(nameOfDay: Days):Boolean ={
+    nameOfDay == Days.Saturday || nameOfDay==Days.Sunday
+  }
+println(isWeekend(Days.Saturday)) //True
+  println(isWeekend(Days.Monday)) //False
 
-
+  for (Days <- Days.values) println(s"Today is $Days")
 }

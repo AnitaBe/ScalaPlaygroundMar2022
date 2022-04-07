@@ -1,5 +1,7 @@
 package com.github.AnitaBe
 
+import scala.collection.mutable.ArrayBuffer
+
 object Day9MapFilter extends App {
   println("Mapping and filtering sequences")
   // idea is to have your loops done for you
