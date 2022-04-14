@@ -1,5 +1,7 @@
 package com.github.AnitaBe
 
+import com.github.AnitaBe.MyUtil.{getLinesFromFile, getTextFromFile}
+
 import scala.io.Source
 
 object Day17ReadingTextFiles extends App {
@@ -21,24 +23,13 @@ println(System.getProperty("user.dir"))
   for (line <- myPoemLines) println(line)
 
   //move to Utilities
-def getTextFromFile(src:String):String = {
-  val bufferedSource = Source.fromFile(src)
-  val text = bufferedSource.mkString
-  bufferedSource.close()
-  text
-}
 
   val myText = getTextFromFile(relativeFilePath)
   println(myText)
 
 
-  //TODO move to utilities
-  def getLinesFromFile (src: String): Array[String] = {
-    val bufferedSource = Source.fromFile(src)
-    val lines = bufferedSource.getLines().toArray
-    bufferedSource.close()
-    lines
-  }
+  //moved to utilities
+
   val maxLines = 5
   println(s"FIRST $maxLines LINES")
   val myLines=getLinesFromFile(relativeFilePath)
