@@ -21,9 +21,10 @@ object Day18FileStatsExercise extends App {
   println(s"Each line has $avgCount words on average")
 
   //You can use the Util functions or maybe add some of your own if you want
-  println("Lines that contains birds:")
-  val birdsLine = textLines.filter(_.contains("birds"))
-  birdsLine.foreach(println)
 
+  val textAuthor = MyUtil.getAuthor(textLines,"Author:")
+  println(s"Author: $textAuthor")
 
+  val textTitle = MyUtil.getTitle(textLines,"Title:")
+  println(s"Title: $textTitle")
 }

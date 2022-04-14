@@ -121,6 +121,14 @@ def getListOfFiles(dir: String, regex:String=".*"):List[File] = {
     val wordsPerLine = wordsLines.map(_.length)
     wordsPerLine
   }
+  def getAuthor(lines: Array[String], prefix:String="Author:"):String = {
+    val authorLine = lines.filter(_.startsWith(prefix))
+    authorLine.head.replace(prefix,"")
+  }
+  def getTitle(lines: Array[String], prefix:String="Title:"):String = {
+    val titleLine = lines.filter(_.startsWith(prefix))
+    titleLine.head.replace(prefix,"")
+  }
 }
 
 
