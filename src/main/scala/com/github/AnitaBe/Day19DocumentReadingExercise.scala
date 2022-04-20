@@ -51,10 +51,19 @@ object Day19DocumentReadingExercise extends App {
   //use first argument as filePath to process
   //otherwise default filePath will be src/resources/webPages.txt
 
-
-  //TODO read all lines from filePath
+  //read all lines from filePath
   //assume each line is one URL
   //bonus: add https:// prefix if one is not present in each line - if http:// OR https:// is present DO NOTHING
+  val filePath = "src/resources/web_addresses.txt"
+  val lines = MyUtil.getLinesFromFile(filePath)
+  val fileContent = for (line <- lines) yield {
+    if (line.startsWith("http://") || line.startsWith("https://")) line
+    else "https://" + line
+  }
+  fileContent.foreach(println)
+
+
+
 
   //TODO read all URLs - save into array of Document objects
   //TODO call save method on all members of the array
