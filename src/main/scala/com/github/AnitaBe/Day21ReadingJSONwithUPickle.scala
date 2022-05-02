@@ -51,7 +51,11 @@ object Day21ReadingJSONwithUPickle extends App {
   //find 5 fruits with most carbohydrates that are not sugars (so difference between carbohydrates and sugar)
   val nonSugarCarbohydrates = fruits.sortBy(_.nonSugars)
   println("Top 5 fruits with most carbohydrates that are not sugars:")
-  nonSugarCarbohydrates.reverse.take(5).foreach(println)
+  nonSugarCarbohydrates.reverse.take(5).foreach(_.prettyPrint)
   //you can add some extra conclusions, statistics as well
 
-}
+  val JSONstring = "[" + fruits.map(_.getJSON()).mkString(",\n") + "]"
+  val dst = "src/resources/json/fruits.json"
+  MyUtil.saveText(dst, JSONstring)
+
+  }

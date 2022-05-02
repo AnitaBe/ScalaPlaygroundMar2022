@@ -9,3 +9,5 @@ lazy val root = (project in file("."))
 
 libraryDependencies += "com.lihaoyi" %% "upickle" % "1.6.0"
 //I am saying I want this library included in my project above
+
+libraryDependencies += "org.scala-lang.modules" %% "scala-xml" % "2.1.0"
